@@ -1,3 +1,6 @@
 /.idea/
 /.metadata/
 /.vscode/
+/ClientApp/.idea/
+/ClientApp/.settings/
+/ClientApp/.vscode/
