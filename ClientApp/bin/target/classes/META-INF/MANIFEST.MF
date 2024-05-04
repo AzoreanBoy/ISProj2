@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 19
+Class-Path: lib/resteasy-client-3.15.3.Final.jar lib/jboss-jaxrs-api_2.1
+ _spec-2.0.1.Final.jar lib/resteasy-jaxrs-3.15.3.Final.jar lib/jboss-jax
+ b-api_2.3_spec-2.0.1.Final.jar lib/reactive-streams-1.0.3.jar lib/jakar
+ ta.validation-api-2.0.2.jar lib/jboss-annotations-api_1.3_spec-2.0.1.Fi
+ nal.jar lib/jakarta.activation-1.2.2.jar lib/jcip-annotations-1.0-1.jar
+  lib/jboss-logging-3.4.1.Final.jar lib/httpclient-4.5.13.jar lib/httpco
+ re-4.4.13.jar lib/commons-logging-1.2.jar lib/commons-codec-1.15.jar li
+ b/commons-io-2.5.jar lib/resteasy-jackson2-provider-3.15.3.Final.jar li
+ b/jackson-core-2.11.3.jar lib/jackson-databind-2.11.3.jar lib/jackson-a
+ nnotations-2.11.3.jar lib/jackson-jaxrs-json-provider-2.11.3.jar lib/ja
+ ckson-jaxrs-base-2.11.3.jar lib/jackson-module-jaxb-annotations-2.11.3.
+ jar lib/json-patch-1.9.jar lib/jackson-coreutils-1.6.jar lib/msg-simple
+ -1.1.jar lib/btf-1.2.jar lib/guava-28.1-jre.jar lib/failureaccess-1.0.1
+ .jar lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+  lib/checker-qual-2.8.1.jar lib/jaxws-rt-4.0.0.jar lib/jaxb-impl-4.0.0.
+ jar lib/jaxb-core-4.0.0.jar lib/ha-api-3.1.13.jar lib/management-api-3.
+ 2.3.jar lib/gmbal-api-only-4.0.3.jar lib/stax-ex-2.1.0.jar lib/streambu
+ ffer-2.1.0.jar lib/mimepull-1.10.0.jar lib/FastInfoset-2.1.0.jar lib/ja
+ karta.mail-api-2.1.0.jar lib/angus-activation-1.0.0.jar lib/angus-mail-
+ 1.0.0.jar lib/saaj-impl-3.0.0.jar lib/woodstox-core-6.2.8.jar lib/stax2
+ -api-4.2.1.jar lib/jakarta.activation-api-2.1.0.jar lib/jakarta.xml.bin
+ d-api-4.0.0.jar lib/jakarta.xml.soap-api-3.0.0.jar lib/jakarta.annotati
+ on-api-2.1.1.jar lib/jakarta.xml.ws-api-4.0.0.jar
+Main-Class: book.App
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="catalog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="serie" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="serie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title" />
+        <xs:element ref="cover-url" />
+        <xs:element ref="year" />
+        <xs:element ref="score" />
+        <xs:element ref="numberOfVotes" />
+        <xs:element ref="pgRating" />
+        <xs:element maxOccurs="unbounded" ref="genre" />
+        <xs:element ref="summaryOfSerie" />
+        <xs:element maxOccurs="unbounded" ref="star" />
+        <xs:element maxOccurs="unbounded" ref="actor" />
+        <xs:element maxOccurs="unbounded" ref="creator" />
+        <xs:element maxOccurs="unbounded" ref="director" />
+        <xs:element maxOccurs="unbounded" ref="writer" />
+        <xs:element minOccurs="0" ref="numberOfSeasons" />
+        <xs:element maxOccurs="unbounded" ref="season" />
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:integer" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cover-url" type="xs:anyURI" />
+  <xs:element name="year">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:maxInclusive value="2022" />
+        <xs:minInclusive value="1950" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="score" type="xs:decimal" />
+  <xs:element name="numberOfVotes" type="xs:integer" />
+  <xs:element name="pgRating" type="xs:NCName" />
+  <xs:element name="genre" type="xs:string" />
+  <xs:element name="summaryOfSerie" type="xs:string" />
+  <xs:element name="star" type="xs:string" />
+  <xs:element name="actor" type="xs:string" />
+  <xs:element name="creator" type="xs:string" />
+  <xs:element name="director" type="xs:string" />
+  <xs:element name="writer" type="xs:string" />
+  <xs:element name="numberOfSeasons" type="xs:integer" />
+  <xs:element name="season">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="episode" />
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:integer" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="episode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title" />
+        <xs:element ref="description" />
+        <xs:element ref="duration" />
+        <xs:element maxOccurs="unbounded" ref="review" />
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:integer" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description" type="xs:string" />
+  <xs:element name="duration" type="xs:NMTOKEN" />
+  <xs:element name="review" type="xs:string" />
+  <xs:element name="title" type="xs:string" />
+</xs:schema>

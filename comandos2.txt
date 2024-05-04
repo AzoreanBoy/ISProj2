@@ -1,0 +1,20 @@
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-j2ee-simple -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=jeeapp -Dversion=1 -DinteractiveMode=false
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=jpa -Dversion=1 -DinteractiveMode=false
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=web -Dversion=1 -DinteractiveMode=false
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=rest -Dversion=1 -DinteractiveMode=false
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=soap -Dversion=1 -DinteractiveMode=false
+
+<---Ligar o Servidor--->
+bin\standalone.bat --server-config=standalone-full.xml
+
+
+
+<---Compilar o trabalho no servidor--->
+mvn clean package -Doutput=C:\Users\pedro\wildfly-26.1.2.Final\standalone\deployments
+
+<--- WS Import --->
+jaxws-ri\bin\wsimport.bat -keep -d src\main\java -p imports "http://localhost:8080/soap/SeriesSoapWS?wsdl"

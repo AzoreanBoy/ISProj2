@@ -1,0 +1,38 @@
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DgroupId=generated -DartifactId=JPA-standalone -Dversion=1 -DinteractiveMode=false
+
+----Criação do Projeto Maven----
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-j2ee-simple -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=jeeapp -Dversion=1 -DinteractiveMode=false
+
+----Criação do Módulo JPA----
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=jpa -Dversion=1 -DinteractiveMode=false
+
+----Criação do Módulo Web---
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=web -Dversion=1 -DinteractiveMode=false
+
+----Criação do Módulo Rest----
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=rest -Dversion=1 -DinteractiveMode=false
+
+----Criação do Modulo SOAP----
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=soapws -Dversion=1 -DinteractiveMode=false
+
+----SOAP cliente----
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DgroupId=book -DartifactId=soapclient -Dversion=1 -DinteractiveMode=false
+
+---- Rest Client ----
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-simple -DarchetypeVersion=1.4 -DgroupId=pt.uc.dei -DartifactId=restclient -Dversion=1 -DinteractiveMode=false
+
+
+--------Deploy do Projeto----------------
+mvn clean package -Doutput=C:\Users\pedro\wildfly-26.1.2.Final\standalone\deployments
+------------------------------------------------------------------------------------------------------------------
+
+
+
+jaxws-ri\bin\wsimport.bat -keep -d src/main/java -p artifact "http://localhost:8080/soapws/CalculatorWS?wsdl"
+
+
+
+--------Cliente------
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-simple -DarchetypeVersion=1.4 -DgroupId=appClient -DartifactId=ClientApp -Dversion=1 -DinteractiveMode=false
+
+jaxws-ri/bin/wsimport.sh -keep -d src/main/java -p artifact "http://localhost:8080//soap/SeriesSoapWS?wsdl"
