@@ -1,0 +1,3 @@
+[submodule "jeeapp"]
+	path = jeeapp
+	url = https://github.com/AzoreanBoy/jeeapp
